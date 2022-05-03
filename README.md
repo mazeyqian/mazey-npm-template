@@ -1,30 +1,50 @@
-# vue-empty
+# mazey-npm-template
 
-> A Vue.js project
+[![NPM version][npm-image]][npm-url]
+[![l][l-image]][l-url]
 
-## Build Setup
+[npm-image]: https://img.shields.io/npm/v/mazey-npm-template
+[npm-url]: https://npmjs.org/package/mazey-npm-template
+[l-image]: https://img.shields.io/npm/l/mazey-npm-template
+[l-url]: https://github.com/mazeyqian/mazey-npm-template
 
-``` bash
-# install dependencies
-npm install
+Mazey NPM template.
 
-# serve with hot reload at localhost:8080
-npm run dev
+## Install
 
-# build for production with minification
-npm run build
+You can get mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-template).
 
-# build for production and view the bundle analyzer report
-npm run build --report
-
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+```
+npm install mazey-npm-template --save
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Usage
+
+Foo description.
+
+```
+import { foo } from 'mazey-npm-template';
+
+foo();
+```
+
+Bar description.
+
+```
+import { bar } from 'mazey-npm-template';
+
+bar();
+```
+
+## Develop
+
+```
+# dev
+npm run dev
+
+# build
+npm run build
+
+# documentation
+npm run docs
+```
