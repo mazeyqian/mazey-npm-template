@@ -1,4 +1,4 @@
-# mazey-npm-template
+# Mazey Npm Template
 
 [![NPM version][npm-image]][npm-url]
 [![l][l-image]][l-url]
