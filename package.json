@@ -1,7 +1,7 @@
 {
   "name": "mazey-npm-template",
   "version": "1.0.1",
-  "description": "Mazey NPM template.",
+  "description": "Mazey NPM template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
@@ -11,19 +11,20 @@
     "build": "npx rollup -c",
     "test": "jest",
     "docs": "npx typedoc --out docs/ src/",
-    "release": "npm run build && npm run docs && npm publish",
-    "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
-    "check-health": "npm run build && npm run docs && npm run test"
+    "preview": "npm run build && npm run test && npm run docs",
+    "release": "npm run preview && npm publish",
+    "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mazeyqian/mazey-npm-template.git"
   },
   "keywords": [
-    "JavaScript",
-    "Function"
+    "javascript",
+    "function",
+    "template"
   ],
-  "author": "MazeyQian",
+  "author": "Mazey Chu",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mazeyqian/mazey-npm-template/issues"
