@@ -33,7 +33,7 @@
   "bugs": {
     "url": "https://github.com/mazeyqian/mazey-npm-template/issues"
   },
-  "homepage": "https://github.com/mazeyqian/mazey-npm-template",
+  "homepage": "https://github.com/mazeyqian/mazey-npm-template#readme",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
