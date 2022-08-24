@@ -24,7 +24,11 @@
     "function",
     "template"
   ],
-  "author": "Mazey Chu",
+  "author": {
+		"name": "Mazey Chu",
+		"email": "mazeyqian@gmail.com",
+		"url": "https://blog.mazey.net"
+	},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mazeyqian/mazey-npm-template/issues"
