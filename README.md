@@ -1,4 +1,4 @@
-# Mazey Npm Template
+# mazey-npm-template
 
 [![NPM version][npm-image]][npm-url]
 [![l][l-image]][l-url]
@@ -8,7 +8,7 @@
 [l-image]: https://img.shields.io/npm/l/mazey-npm-template
 [l-url]: https://github.com/mazeyqian/mazey-npm-template
 
-Mazey NPM template.
+Mazey NPM template description.
 
 ## Install
 
@@ -25,7 +25,7 @@ Foo description.
 ```
 import { foo } from 'mazey-npm-template';
 
-foo();
+foo(); // true
 ```
 
 Bar description.
@@ -33,7 +33,7 @@ Bar description.
 ```
 import { bar } from 'mazey-npm-template';
 
-bar();
+bar(); // false
 ```
 
 ## Develop

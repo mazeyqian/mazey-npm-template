@@ -1,7 +1,7 @@
 {
   "name": "mazey-npm-template",
-  "version": "1.0.1",
-  "description": "Mazey NPM template.",
+  "version": "1.1.1",
+  "description": "Mazey NPM template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
@@ -11,60 +11,64 @@
     "build": "npx rollup -c",
     "test": "jest",
     "docs": "npx typedoc --out docs/ src/",
-    "release": "npm run build && npm run docs && npm publish",
     "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
-    "check-health": "npm run build && npm run docs && npm run test"
+    "preview": "npm run build && npm run test && npm run docs",
+    "release": "npm run preview && npm publish"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mazeyqian/mazey-npm-template.git"
   },
   "keywords": [
-    "JavaScript",
-    "Function"
+    "javascript",
+    "function",
+    "template"
   ],
-  "author": "MazeyQian",
+  "author": {
+		"name": "Mazey Chu",
+		"email": "mazeyqian@gmail.com",
+		"url": "https://blog.mazey.net"
+	},
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mazeyqian/mazey-npm-template/issues"
   },
-  "homepage": "https://github.com/mazeyqian/mazey-npm-template",
+  "homepage": "https://github.com/mazeyqian/mazey-npm-template#readme",
   "devDependencies": {
-    "@babel/core": "7.8.4",
-    "@babel/plugin-proposal-class-properties": "7.10.4",
-    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
-    "@babel/plugin-transform-runtime": "7.11.0",
-    "@babel/preset-env": "7.5.5",
-    "@babel/preset-typescript": "7.10.4",
-    "@commitlint/cli": "17.0.3",
-    "@commitlint/config-conventional": "8.3.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^17.0.3",
+    "@commitlint/config-conventional": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
-    "babel-eslint": "10.1.0",
-    "clean-webpack-plugin": "1.0.1",
-    "eslint": "6.8.0",
-    "eslint-config-standard": "14.1.0",
-    "eslint-plugin-import": "2.20.1",
-    "eslint-plugin-node": "11.0.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1",
-    "html-webpack-plugin": "3.2.0",
-    "http-server": "14.1.1",
-    "husky": "4.3.8",
+    "clean-webpack-plugin": "^1.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "husky": "^4.3.8",
     "jest": "^27.5.1",
-    "lint-staged": "10.0.8",
-    "prettier": "1.19.1",
-    "prettier-eslint-cli": "5.0.0",
-    "rollup": "1.31.1",
-    "rollup-plugin-babel": "4.3.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "^1.19.1",
+    "prettier-eslint-cli": "^5.0.0",
+    "rollup": "^1.31.1",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-typescript2": "0.27.2",
-    "ts-loader": "8.0.2",
-    "typedoc": "0.18.0",
-    "typescript": "3.9.7",
-    "webpack": "4.30.0",
-    "webpack-cli": "3.3.2",
-    "webpack-dev-server": "4.10.0"
+    "rollup-plugin-typescript2": "^0.27.2",
+    "ts-loader": "^8.0.2",
+    "typedoc": "^0.18.0",
+    "typescript": "^3.9.7",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^4.10.0"
   },
   "husky": {
     "hooks": {
@@ -73,8 +77,8 @@
     }
   },
   "dependencies": {
-    "@babel/runtime-corejs3": "7.11.2",
-    "core-js": "3.6.5",
+    "@babel/runtime-corejs3": "^7.11.2",
+    "core-js": "^3.6.5",
     "mazey": "^1.4.39"
   }
 }
