@@ -1,6 +1,6 @@
 import {
   // pass
- } from './index';
+ } from '../src/index';
 
 /*
 pass

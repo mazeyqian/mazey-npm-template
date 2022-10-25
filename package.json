@@ -7,13 +7,13 @@
   "typings": "lib/index.d.ts",
   "mainEntryPointFilePath": "lib/index.d.ts",
   "scripts": {
-    "dev": "webpack-dev-server --open",
+    "dev": "webpack-dev-server --config webpack.config.dev.js --open",
     "build": "npx rollup -c",
     "test": "jest",
-    "docs": "npx typedoc --out docs/ src/",
+    "docs": "npx typedoc",
     "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
     "preview": "npm run build && npm run test && npm run docs",
-    "release": "npm run preview && npm publish"
+    "release": "npm run preview && npm publish && node ./scripts/release.js"
   },
   "repository": {
     "type": "git",
@@ -25,10 +25,10 @@
     "template"
   ],
   "author": {
-		"name": "Mazey Chu",
-		"email": "mazeyqian@gmail.com",
-		"url": "https://blog.mazey.net"
-	},
+    "name": "Mazey Chu",
+    "email": "mazeyqian@gmail.com",
+    "url": "https://blog.mazey.net"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/mazeyqian/mazey-npm-template/issues"
@@ -52,6 +52,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
+    "execa": "^4.1.0",
     "html-webpack-plugin": "^3.2.0",
     "husky": "^4.3.8",
     "jest": "^27.5.1",
@@ -62,6 +63,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.27.2",
     "ts-loader": "^8.0.2",
     "typedoc": "^0.18.0",
@@ -79,6 +81,6 @@
   "dependencies": {
     "@babel/runtime-corejs3": "^7.11.2",
     "core-js": "^3.6.5",
-    "mazey": "^1.4.39"
+    "mazey": "^3.3.2"
   }
 }
