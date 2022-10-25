@@ -1,2 +1,3 @@
+/* eslint-disable no-undef */
 // release
-import 'mazey/scripts/release';
+require('mazey/scripts/release');
