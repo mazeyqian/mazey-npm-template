@@ -12,7 +12,7 @@ Mazey NPM template description.
 
 ## Install
 
-You can get mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-template).
+Use mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-template).
 
 ```
 npm install mazey-npm-template --save
@@ -20,7 +20,7 @@ npm install mazey-npm-template --save
 
 ## Usage
 
-Foo description.
+Foo foo foo example.
 
 ```
 import { foo } from 'mazey-npm-template';
@@ -28,7 +28,7 @@ import { foo } from 'mazey-npm-template';
 foo(); // true
 ```
 
-Bar description.
+Bar bar bar example.
 
 ```
 import { bar } from 'mazey-npm-template';
@@ -40,11 +40,11 @@ bar(); // false
 
 ```
 # dev
-npm run dev
+npm run dev;
 
 # build
-npm run build
+npm run build;
 
 # documentation
-npm run docs
+npm run docs;
 ```

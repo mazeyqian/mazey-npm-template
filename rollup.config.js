@@ -3,18 +3,26 @@ import rollupTypescript from 'rollup-plugin-typescript2';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import commonjs from 'rollup-plugin-commonjs';
 import cleaner from 'rollup-plugin-cleaner';
+import { terser } from 'rollup-plugin-terser';
 
+// https://rollupjs.org/guide/en/
 export default {
   input: 'src/index.ts',
+  // https://rollupjs.org/guide/en/#outputformat
   output: [
     {
       file: 'lib/index.cjs.js',
-      format: 'cjs'
+      format: 'cjs',
     },
     {
       file: 'lib/index.esm.js',
-      format: 'esm'
-    }
+      format: 'esm',
+    },
+    {
+      file: 'lib/MAZEY_NPM_TEMPLATE.min.js',
+      format: 'iife',
+      name: 'MAZEY_NPM_TEMPLATE',
+    },
   ],
   plugins: [
     // Remove the `lib` directory before rebuilding.
@@ -37,7 +45,15 @@ export default {
         ...DEFAULT_EXTENSIONS,
         '.ts',
       ],
-    })
+    }),
+    // Add minification.
+    // https://github.com/TrySound/rollup-plugin-terser
+    terser({ // https://github.com/terser/terser
+      format: {
+        comments: false, // `false` to omit comments in the output
+      },
+    }),
+    // uglify(),
   ],
-  external: []
+  external: [],
 };
