@@ -1,6 +1,6 @@
 {
   "name": "mazey-npm-template",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Mazey NPM template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -8,9 +8,9 @@
   "mainEntryPointFilePath": "lib/index.d.ts",
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.dev.js --open",
-    "build": "npx rollup -c",
+    "build": "rollup -c",
     "test": "jest",
-    "docs": "npx typedoc",
+    "docs": "typedoc",
     "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
     "preview": "npm run build && npm run test && npm run docs",
     "release": "npm run preview && npm publish && node ./scripts/release.js"
@@ -58,7 +58,7 @@
     "husky": "^4.3.8",
     "jest": "^27.5.1",
     "lint-staged": "^10.0.8",
-    "mazey": "^3.3.2",
+    "mazey": "^3.3.4",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
     "rollup": "^1.31.1",
