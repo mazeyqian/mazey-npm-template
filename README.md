@@ -36,15 +36,25 @@ import { bar } from 'mazey-npm-template';
 bar(); // false
 ```
 
-## Develop
+## Contributing
 
 ```
-# dev
-npm run dev;
+# Install
+npm i --registry=https://registry.npmjs.org
 
-# build
-npm run build;
+# Serve
+npm run dev
 
-# documentation
-npm run docs;
+# Build
+npm run build
+
+# Document
+npm run docs
+
+# Test
+npm run test
 ```
+
+## License
+
+This software is released under the terms of the [MIT license](https://github.com/mazeyqian/mazey-npm-template/blob/master/LICENSE).
