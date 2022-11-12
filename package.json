@@ -1,6 +1,6 @@
 {
   "name": "mazey-npm-template",
-  "version": "1.2.3",
+  "version": "1.3.1",
   "description": "Mazey NPM template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -61,7 +61,7 @@
     "mazey": "^3.3.4",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
-    "rollup": "^1.31.1",
+    "rollup": "^2.79.1",
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
