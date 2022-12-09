@@ -58,7 +58,7 @@
     "husky": "^4.3.8",
     "jest": "^27.5.1",
     "lint-staged": "^10.0.8",
-    "mazey": "^3.3.4",
+    "mazey": "^3.3.9",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
     "rollup": "^2.79.1",
