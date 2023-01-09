@@ -1,6 +1,6 @@
 {
   "name": "mazey-npm-template",
-  "version": "1.3.6",
+  "version": "1.4.0",
   "description": "Mazey NPM template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
@@ -10,10 +10,10 @@
     "dev": "webpack-dev-server --config webpack.config.dev.js --open",
     "build": "rollup -c",
     "test": "jest",
-    "docs": "typedoc",
+    "docs": "cross-env rm -f ./docs/t.html && typedoc --hideGenerator && cp ./src/t.html ./docs",
     "lint:fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
     "preview": "npm run build && npm run test && npm run docs",
-    "release": "npm run preview && node ./scripts/release.js"
+    "release": "npm run preview && cross-env SCRIPTS_NPM_PACKAGE_VERSION=$npm_package_version node ./scripts/release.js"
   },
   "repository": {
     "type": "git",
@@ -49,6 +49,8 @@
     "@webpack-cli/serve": "^1.7.0",
     "clean-webpack-plugin": "^1.0.1",
     "core-js": "^3.6.5",
+    "cross-env": "^7.0.3",
+    "date-fns": "^2.29.3",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
@@ -60,7 +62,8 @@
     "husky": "^4.3.8",
     "jest": "^27.5.1",
     "lint-staged": "^10.0.8",
-    "mazey": "^3.4.0",
+    "markdown-toc": "^1.2.0",
+    "mazey": "^3.4.1",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
     "rollup": "^2.79.1",

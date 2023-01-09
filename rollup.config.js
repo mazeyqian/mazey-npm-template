@@ -8,7 +8,7 @@ import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
 
 const pkgName = require('./package.json').name;
-const iifeName = pkgName.replace('-', '_');
+const iifeName = pkgName.replace(/-/g, '_');
 const pkgVersion = process.env.SCRIPTS_NPM_PACKAGE_VERSION || process.env.VERSION || require('./package.json').version;
 const banner =
   '/*!\n' +
