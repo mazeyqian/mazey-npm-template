@@ -1,9 +1,21 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-undef */
 import babel from 'rollup-plugin-babel';
 import rollupTypescript from 'rollup-plugin-typescript2';
 import { DEFAULT_EXTENSIONS } from '@babel/core';
 import commonjs from 'rollup-plugin-commonjs';
 import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
+
+const pkgName = require('./package.json').name;
+const iifeName = pkgName.replace('-', '_');
+const pkgVersion = process.env.SCRIPTS_NPM_PACKAGE_VERSION || process.env.VERSION || require('./package.json').version;
+const banner =
+  '/*!\n' +
+  ` * ${pkgName} v${pkgVersion}\n` +
+  ` * (c) 2018-${new Date().getFullYear()} Mazey Chu\n` +
+  ' * Released under the MIT License.\n' +
+  ' */';
 
 // https://rollupjs.org/guide/en/
 export default {
@@ -13,15 +25,18 @@ export default {
     {
       file: 'lib/index.cjs.js',
       format: 'cjs',
+      banner,
     },
     {
       file: 'lib/index.esm.js',
       format: 'esm',
+      banner,
     },
     {
-      file: 'lib/MAZEY_NPM_TEMPLATE.min.js',
+      file: `lib/${pkgName}.min.js`,
       format: 'iife',
-      name: 'MAZEY_NPM_TEMPLATE',
+      name: iifeName,
+      banner,
     },
   ],
   plugins: [

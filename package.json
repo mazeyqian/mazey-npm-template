@@ -11,7 +11,7 @@
     "build": "rollup -c",
     "test": "jest",
     "docs": "typedoc",
-    "lint-and-fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
+    "lint:fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
     "preview": "npm run build && npm run test && npm run docs",
     "release": "npm run preview && node ./scripts/release.js"
   },
@@ -41,12 +41,14 @@
     "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-typescript": "^7.10.4",
+    "@babel/runtime-corejs3": "^7.11.2",
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "@webpack-cli/serve": "^1.7.0",
     "clean-webpack-plugin": "^1.0.1",
+    "core-js": "^3.6.5",
     "eslint": "^6.8.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.20.1",
@@ -58,7 +60,7 @@
     "husky": "^4.3.8",
     "jest": "^27.5.1",
     "lint-staged": "^10.0.8",
-    "mazey": "^3.3.9",
+    "mazey": "^3.4.0",
     "prettier": "^1.19.1",
     "prettier-eslint-cli": "^5.0.0",
     "rollup": "^2.79.1",
@@ -79,9 +81,5 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
-  },
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.11.2",
-    "core-js": "^3.6.5"
   }
 }
