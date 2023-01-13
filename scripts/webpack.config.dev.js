@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-undef */
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const { _resolve } = require('mazey/scripts/build-helper');
+const path = require('path');
+const _resolve = (_path) => path.resolve(__dirname, _path);
 
 module.exports = {
   entry: {

@@ -1,4 +1,6 @@
-/* Function */
+/**
+ * @author: Mazey Chu
+ */
 
 /**
  * Foo foo foo, Foo description.

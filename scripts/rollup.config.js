@@ -7,7 +7,8 @@ import commonjs from 'rollup-plugin-commonjs';
 import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
 
-const { _resolve } = require('mazey/scripts/build-helper');
+const path = require('path');
+const _resolve = (_path) => path.resolve(__dirname, _path);
 const pkgName = require('../package.json').name;
 const iifeName = pkgName.replace(/-/g, '_');
 const pkgVersion = process.env.SCRIPTS_NPM_PACKAGE_VERSION || process.env.VERSION || require('../package.json').version;
