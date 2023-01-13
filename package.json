@@ -10,7 +10,7 @@
     "dev": "webpack-dev-server --config ./scripts/webpack.config.dev.js --open",
     "build": "rollup --config ./scripts/rollup.config.js",
     "test": "jest",
-    "docs": "cross-env rm -f ./docs/t.html && typedoc --hideGenerator && cp ./src/t.html ./docs",
+    "docs": "typedoc --hideGenerator",
     "lint:fix": "eslint ./src/index.ts --ext 'ts,tsx' --fix",
     "preview": "npm run build && npm run test && npm run docs",
     "release": "npm run preview && cross-env SCRIPTS_NPM_PACKAGE_VERSION=$npm_package_version node ./scripts/release.js"
