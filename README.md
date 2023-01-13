@@ -40,7 +40,7 @@ bar(); // false
 
 ```
 # Install
-npm i --registry=https://registry.npmjs.org
+npm i
 
 # Serve
 npm run dev
