@@ -1,4 +1,7 @@
 /**
+ * @author: Mazey Chu
+ */
+/**
  * Foo foo foo, Foo description.
  *
  * @returns {Boolean} true or false
