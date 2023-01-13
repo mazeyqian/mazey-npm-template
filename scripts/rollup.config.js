@@ -10,7 +10,7 @@ import { terser } from 'rollup-plugin-terser';
 const path = require('path');
 const _resolve = (_path) => path.resolve(__dirname, _path);
 const pkgName = require('../package.json').name;
-const iifeName = pkgName.replace(/-/g, '_');
+const iifeName = pkgName.replace(/-/g, '_').toUpperCase();
 const pkgVersion = process.env.SCRIPTS_NPM_PACKAGE_VERSION || process.env.VERSION || require('../package.json').version;
 const banner =
   '/*!\n' +
@@ -45,7 +45,8 @@ const plugins = [
   // https://github.com/TrySound/rollup-plugin-terser
   terser({ // https://github.com/terser/terser
     format: {
-      comments: false, // `false` to omit comments in the output
+      // https://github.com/terser/terser#format-options
+      comments: /^!\n\s\*\smazey-npm-template/, // 'some', // `false` to omit comments in the output
     },
   }),
   // uglify(),
