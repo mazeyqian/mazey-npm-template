@@ -1,3 +1,5 @@
+⚠️ Note: The project is a template for NPM. Please don't use it directly.
+
 # mazey-npm-template
 
 [![NPM version][npm-image]][npm-url]
@@ -40,7 +42,7 @@ bar(); // false
 
 ```
 # Install
-npm i --registry=https://registry.npmjs.org
+npm i
 
 # Serve
 npm run dev

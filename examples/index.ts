@@ -1,7 +1,7 @@
-import {
-  // pass
- } from '../src/index';
+import { foo } from "../src/index";
 
-/*
-pass
-*/
+console.log("dev: mazey-npm-template");
+
+const fooValue = foo();
+
+console.log("fooValue:", fooValue);
