@@ -40,20 +40,33 @@ bar(); // false
 
 ## Contributing
 
+**Install Dependencies**
+
 ```
-# Install
 npm i
+```
 
-# Serve
+**Development**
+
+```
 npm run dev
+```
 
-# Build
+**Build**
+
+```
 npm run build
+```
 
-# Document
+**Document**
+
+```
 npm run docs
+```
 
-# Test
+**Test**
+
+```
 npm run test
 ```
 
