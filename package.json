@@ -20,9 +20,11 @@
     "url": "git+https://github.com/mazeyqian/mazey-npm-template.git"
   },
   "keywords": [
-    "javascript",
+    "template",
+    "typescript",
     "function",
-    "template"
+    "document",
+    "test"
   ],
   "author": {
     "name": "Mazey Chu",
