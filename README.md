@@ -72,4 +72,4 @@ npm run test
 
 ## License
 
-This software is released under the terms of the [MIT license](https://github.com/mazeyqian/mazey-npm-template/blob/master/LICENSE).
+This software is released under the terms of the [MIT license](https://github.com/mazeyqian/mazey-npm-template/blob/main/LICENSE).
