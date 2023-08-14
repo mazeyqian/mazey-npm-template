@@ -11,6 +11,28 @@
   ],
   "rules": {
     "semi": ["warn", "always"],
-    "quotes": ["error", "single"]
+    "quotes": ["warn", "single"],
+    "indent": ["warn", 2, { "SwitchCase": 1 }],
+    "comma-dangle": ["warn", "always-multiline"],
+    "eol-last": ["warn", "always"],
+    "max-lines": [
+      "warn",
+      {
+        "max": 700,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 200,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreUrls": true
+      }
+    ],
+    "spaced-comment": ["warn", "always"]
   }
 }
