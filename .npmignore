@@ -6,6 +6,9 @@ doc/
 docs/
 undefined/
 temp/
+src/
+examples/
+images/
 
 # .
 .idea
@@ -18,6 +21,7 @@ temp/
 .eslintrc.js
 .babelrc
 .eslintrc
+.npmrc
 
 # *
 *.yml
@@ -37,3 +41,7 @@ webpack.config.js
 jsdoc.config.json
 tsconfig.json
 typing.d.ts
+README_CN.md
+README_ZH.md
+scripts/README.md
+scripts/env.sh
