@@ -28,7 +28,7 @@ const plugins = [
   }),
   rollupTypescript(),
   commonjs({
-    include: /node_modules/
+    include: /node_modules/,
   }),
   babel({
     runtimeHelpers: true,
