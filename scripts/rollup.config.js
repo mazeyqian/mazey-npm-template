@@ -15,13 +15,12 @@ const pkgVersion = process.env.SCRIPTS_NPM_PACKAGE_VERSION || process.env.VERSIO
 const banner =
   '/*!\n' +
   ` * ${pkgName} v${pkgVersion}\n` +
-  ` * (c) 2018-${new Date().getFullYear()} Mazey Chu\n` +
+  ` * (c) 2018-${new Date().getFullYear()} Mazey Chu https://www.npmjs.com/package/mazey-npm-template\n` +
   ' * Released under the MIT License.\n' +
   ' */';
 
 const plugins = [
   // Remove the `lib` directory before rebuilding.
-  // https://github.com/aMarCruz/rollup-plugin-cleanup
   cleaner({
     targets: [
       _resolve('../lib/'),
@@ -29,30 +28,28 @@ const plugins = [
   }),
   rollupTypescript(),
   commonjs({
-    include: /node_modules/
+    include: /node_modules/,
   }),
   babel({
     runtimeHelpers: true,
-    // 只转换源代码，不运行外部依赖
+    // Only transpile our source code, not dependencies.
     exclude: 'node_modules/**',
-    // babel 默认不支持 ts 需要手动添加
+    // By default, Babel does not support TypeScript
+    // and requires manual configuration to add support for it.
     extensions: [
       ...DEFAULT_EXTENSIONS,
       '.ts',
     ],
   }),
   // Add minification.
-  // https://github.com/TrySound/rollup-plugin-terser
-  terser({ // https://github.com/terser/terser
+  terser({
     format: {
       // https://github.com/terser/terser#format-options
-      comments: /^!\n\s\*\smazey-npm-template/, // 'some', // `false` to omit comments in the output
+      comments: /^!\n\s\*\smazey-npm-template/, // `'some'`/`false` to omit comments in the output
     },
   }),
-  // uglify(),
 ];
 
-// https://rollupjs.org/guide/en/
 export default {
   input: _resolve('../src/index.ts'),
   // https://rollupjs.org/guide/en/#outputformat

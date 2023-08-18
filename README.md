@@ -40,23 +40,36 @@ bar(); // false
 
 ## Contributing
 
+**Install Dependencies**
+
 ```
-# Install
 npm i
+```
 
-# Serve
+**Development**
+
+```
 npm run dev
+```
 
-# Build
+**Build**
+
+```
 npm run build
+```
 
-# Document
+**Document**
+
+```
 npm run docs
+```
 
-# Test
+**Test**
+
+```
 npm run test
 ```
 
 ## License
 
-This software is released under the terms of the [MIT license](https://github.com/mazeyqian/mazey-npm-template/blob/master/LICENSE).
+This software is released under the terms of the [MIT license](https://github.com/mazeyqian/mazey-npm-template/blob/main/LICENSE).
