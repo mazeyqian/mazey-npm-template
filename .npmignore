@@ -9,6 +9,7 @@ temp/
 src/
 examples/
 images/
+scripts/
 
 # .
 .idea
@@ -43,5 +44,3 @@ tsconfig.json
 typing.d.ts
 README_CN.md
 README_ZH.md
-scripts/README.md
-scripts/env.sh
