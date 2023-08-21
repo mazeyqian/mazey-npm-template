@@ -4,7 +4,7 @@
 name: Mazey Node.js CI
 on:
   push:
-    branches: [ main, fix/v1.5/dependency_conflict ]
+    branches: [ main ]
 jobs:
   build:
     name: Build and Test
