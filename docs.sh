@@ -7,7 +7,7 @@ npm -v
 # curl -o- https://gitee.com/weizy1983/nvm/raw/v0.39.1/install.sh | bash
 # wget -qO- https://gitee.com/weizy1983/nvm/raw/v0.39.1/install.sh | bash
 
-git clone git@gitee.com:mirrors/nvm.git
+git clone https://gitee.com/mirrors/nvm.git
 
 . nvm/install.sh
 
