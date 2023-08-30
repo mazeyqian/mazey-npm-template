@@ -1,0 +1,26 @@
+# This workflow will do a clean install of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Mazey Node.js 18.x CI
+on:
+  push:
+    branches: [ test/v1.5/actions ]
+jobs:
+  build:
+    name: Build and Test
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [18]
+    runs-on: ${{ matrix.os }}
+    steps:
+      # This step is necessary to make the repository code available for subsequent steps.
+      - name: Checkout
+        uses: actions/checkout@v3
+      # This step is necessary to ensure that the correct version
+      # of Node.js is installed and available for subsequent steps.
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: bash docs.sh
