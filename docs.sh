@@ -13,4 +13,4 @@ git clone git@gitee.com:mirrors/nvm.git
 
 export NVM_NODEJS_ORG_MIRROR=https://registry.npmmirror.com/-/binary/node
 
-npm install --registry=http://registry.npm.bilibili.co
+npm install
