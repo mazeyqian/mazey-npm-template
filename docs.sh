@@ -16,7 +16,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 nvm -v
 
-nvm list
+nvm ls
 
 export NVM_NODEJS_ORG_MIRROR=https://registry.npmmirror.com/-/binary/node
 
