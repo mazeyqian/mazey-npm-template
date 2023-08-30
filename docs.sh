@@ -20,4 +20,10 @@ nvm ls
 
 export NVM_NODEJS_ORG_MIRROR=https://registry.npmmirror.com/-/binary/node
 
+nvm install 14
+
+nvm use 14
+
+node -v
+
 npm install
