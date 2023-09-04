@@ -1,8 +1,8 @@
-⚠️ Note: The project is a template for NPM. Please don't use it directly.
+⚠️ Note: The project is a template for npm. Please don't use it directly.
 
 # mazey-npm-template
 
-[![NPM version][npm-image]][npm-url]
+[![npm version][npm-image]][npm-url]
 [![l][l-image]][l-url]
 
 [npm-image]: https://img.shields.io/npm/v/mazey-npm-template
@@ -10,7 +10,7 @@
 [l-image]: https://img.shields.io/npm/l/mazey-npm-template
 [l-url]: https://github.com/mazeyqian/mazey-npm-template
 
-Mazey NPM template description.
+Mazey's npm template description.
 
 ## Install
 
@@ -19,6 +19,8 @@ Use mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-templat
 ```
 npm install mazey-npm-template --save
 ```
+
+Of course, you can also download this file and serve it yourself. The file locates at the `lib/mazey-npm-template.min.js`.
 
 ## Usage
 
