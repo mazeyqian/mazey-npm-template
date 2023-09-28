@@ -7,6 +7,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import cleaner from 'rollup-plugin-cleaner';
 import { terser } from 'rollup-plugin-terser';
+import dts from 'rollup-plugin-dts';
 
 const path = require('path');
 const _resolve = (_path) => path.resolve(__dirname, _path);
@@ -45,6 +46,21 @@ const plugins = [
     },
   }),
 ];
+
+const dTsConf = {
+  input: _resolve('../src/index.ts'),
+  // https://rollupjs.org/guide/en/#outputformat
+  output: [
+    {
+      file: _resolve('../lib/index.d.ts'),
+      format: 'es',
+    },
+  ],
+  plugins: [
+    dts(),
+  ],
+  external: [],
+};
 
 export default [
   {
@@ -89,4 +105,5 @@ export default [
       ...plugins,
     ],
   },
+  dTsConf,
 ];

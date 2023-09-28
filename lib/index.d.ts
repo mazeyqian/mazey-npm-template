@@ -6,11 +6,12 @@
  *
  * @returns {Boolean} true or false
  */
-export declare function foo(): boolean;
+declare function foo(): boolean;
 /**
  * Bar bar bar, Bar description.
  *
  * @returns {Boolean} true or false
  */
-export declare function bar(): boolean;
-//# sourceMappingURL=index.d.ts.map
+declare function bar(): boolean;
+
+export { bar, foo };
