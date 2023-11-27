@@ -18,7 +18,7 @@ const inputResolve = _resolve('../src/index.ts');
 const banner =
   '/*!\n' +
   ` * ${pkgName} v${pkgVersion}\n` +
-  ` * (c) 2018-${new Date().getFullYear()} Mazey Chu https://www.npmjs.com/package/mazey-npm-template\n` +
+  ` * (c) 2018-${new Date().getFullYear()} Cheng https://www.npmjs.com/package/mazey-npm-template\n` +
   ' * Released under the MIT License.\n' +
   ' */';
 
