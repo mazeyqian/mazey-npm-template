@@ -32,9 +32,9 @@ module.exports = {
       inject: true,
       chunksSortMode: 'dependency',
     }),
-    new CleanWebpackPlugin([_resolve('../dist')]),
+    new CleanWebpackPlugin([ _resolve('../dist') ]),
   ],
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: [ '.tsx', '.ts', '.js' ],
   },
 };
