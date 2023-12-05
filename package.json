@@ -1,7 +1,7 @@
 {
   "name": "mazey-npm-template",
-  "version": "1.5.5",
-  "description": "Mazey NPM template description.",
+  "version": "1.6.0",
+  "description": "Mazey's npm template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
@@ -72,6 +72,7 @@
     "rollup-plugin-babel": "^4.3.3",
     "rollup-plugin-cleaner": "^1.0.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "ts-loader": "^8.0.2",
