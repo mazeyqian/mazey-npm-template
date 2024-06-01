@@ -42,6 +42,18 @@ bar(); // false
 
 ## Contributing
 
+### Development Environment
+
+#### Node.js
+
+- v16.19.0
+
+#### TypeScript
+
+- v5.1.6
+
+### Scripts
+
 Install Dependencies:
 
 ```shell
