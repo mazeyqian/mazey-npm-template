@@ -1,12 +1,17 @@
 {
   "name": "mazey-npm-template",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Mazey's npm template description.",
   "main": "lib/index.cjs.js",
   "module": "lib/index.esm.js",
   "typings": "lib/index.d.ts",
   "types": "lib/index.d.ts",
   "mainEntryPointFilePath": "lib/index.d.ts",
+  "directories": {
+    "lib": "./lib"
+  },
+  "unpkg": "lib/mazey-npm-template.min.js",
+  "jsdelivr": "lib/mazey-npm-template.min.js",
   "scripts": {
     "dev": "webpack-dev-server --config ./scripts/webpack.config.dev.js --open",
     "build": "cross-env SCRIPTS_NPM_PACKAGE_DEBUG=close SCRIPTS_NPM_PACKAGE_VERSION=$npm_package_version rollup --config ./scripts/rollup.config.mjs",
@@ -98,6 +103,6 @@
     }
   },
   "dependencies": {
-    "mazey": "4.3.3-alpha-202406080522pm"
+    "mazey": "4.3.3"
   }
 }

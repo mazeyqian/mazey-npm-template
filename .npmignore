@@ -13,9 +13,7 @@ coverage/
 types/
 
 # Specific script subdirectories
-scripts/convert/
-scripts/shell/
-scripts/*.sh
+scripts/
 
 # Editors & IDEs settings
 .idea/
