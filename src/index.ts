@@ -5,7 +5,7 @@
 /**
  * Foo foo foo, Foo description.
  *
- * @returns {Boolean} true or false
+ * @returns {boolean} true or false
  */
 export function foo(): boolean {
   return true;
@@ -14,7 +14,7 @@ export function foo(): boolean {
 /**
  * Bar bar bar, Bar description.
  *
- * @returns {Boolean} true or false
+ * @returns {boolean} true or false
  */
 export function bar(): boolean {
   return false;
