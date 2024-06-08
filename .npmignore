@@ -15,6 +15,7 @@ types/
 # Specific script subdirectories
 scripts/convert/
 scripts/shell/
+scripts/*.sh
 
 # Editors & IDEs settings
 .idea/
