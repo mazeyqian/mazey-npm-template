@@ -46,13 +46,10 @@ bar(); // false
 
 ### Development Environment
 
-#### Node.js
-
-- v16.19.0
-
-#### TypeScript
-
-- v5.1.6
+| Dependency | Version  |
+|------------|----------|
+| Node.js    | v16.19.0 |
+| TypeScript | v5.1.6   |
 
 ### Scripts
 
