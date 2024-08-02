@@ -55,32 +55,32 @@ bar(); // false
 
 Install Dependencies:
 
-```shell
+```bash
 npm i
 ```
 
 Development:
 
-```shell
+```bash
 npm run dev
 ```
 
 Build:
 
-```shell
+```bash
 npm run build
-```
-
-Document:
-
-```shell
-npm run docs
 ```
 
 Test:
 
-```shell
+```bash
 npm run test
+```
+
+Document:
+
+```bash
+npm run docs
 ```
 
 ## License
