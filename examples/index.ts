@@ -1,1 +1,1 @@
-console.log('dev: mazey-npm-template');
+console.log("dev: mazey-npm-template");

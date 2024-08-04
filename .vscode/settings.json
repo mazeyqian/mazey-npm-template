@@ -1,3 +1,4 @@
 {
-  "window.title": "${rootName}${separator}${dirty}${activeEditorShort}${separator}${profileName}${separator}${appName}"
+  "window.title": "${rootName}${separator}${dirty}${activeEditorShort}${separator}${profileName}${separator}${appName}",
+  "liveServer.settings.port": 5501
 }
