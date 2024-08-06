@@ -18,7 +18,7 @@ Mazey's npm template description.
 
 Use mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-template).
 
-```shell
+```bash
 npm install mazey-npm-template --save
 ```
 
