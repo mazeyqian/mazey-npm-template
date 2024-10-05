@@ -1,6 +1,8 @@
+/**
+ * @jest-environment node
+ */
 /* eslint-disable no-undef */
-// import { foo } from '../lib/index.esm';
 
-test('Is foo() true?', () => {
-  expect('foo'.length === 3).toBe(true);
+test("Is Mazey() true?", () => {
+  expect("Mazey".length === 5).toBe(true);
 });
