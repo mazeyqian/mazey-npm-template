@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ⚠️ Note: The project is a template for npm. Please don't use it directly.
 
 # mazey-npm-template
@@ -27,7 +29,7 @@ Of course, you can also download this file and serve it yourself. The file locat
 Foo foo foo example.
 
 ```javascript
-import { foo } from 'mazey-npm-template';
+import { foo } from "mazey-npm-template";
 
 foo(); // true
 ```
@@ -35,7 +37,7 @@ foo(); // true
 Bar bar bar example.
 
 ```javascript
-import { bar } from 'mazey-npm-template';
+import { bar } from "mazey-npm-template";
 
 bar(); // false
 ```
@@ -44,44 +46,41 @@ bar(); // false
 
 ### Development Environment
 
-#### Node.js
-
-- v16.19.0
-
-#### TypeScript
-
-- v5.1.6
+| Dependency | Version  |
+|------------|----------|
+| Node.js    | v16.19.0 |
+| TypeScript | v5.1.6   |
 
 ### Scripts
 
 Install Dependencies:
 
-```shell
+```bash
 npm i
 ```
 
 Development:
 
-```shell
+```bash
 npm run dev
 ```
 
 Build:
 
-```shell
+```bash
 npm run build
-```
-
-Document:
-
-```shell
-npm run docs
 ```
 
 Test:
 
-```shell
+```bash
 npm run test
+```
+
+Document:
+
+```bash
+npm run docs
 ```
 
 ## License
