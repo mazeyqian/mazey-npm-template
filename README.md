@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD041 -->
+
 ⚠️ Note: The project is a template for npm. Please don't use it directly.
 
 # mazey-npm-template
@@ -27,7 +29,7 @@ Of course, you can also download this file and serve it yourself. The file locat
 Foo foo foo example.
 
 ```javascript
-import { foo } from 'mazey-npm-template';
+import { foo } from "mazey-npm-template";
 
 foo(); // true
 ```
@@ -35,7 +37,7 @@ foo(); // true
 Bar bar bar example.
 
 ```javascript
-import { bar } from 'mazey-npm-template';
+import { bar } from "mazey-npm-template";
 
 bar(); // false
 ```
