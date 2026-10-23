@@ -1,5 +1,7 @@
 > **Note:** This package is a working npm library template. Use it as a starting point and replace
-> the sample package identity and API before publishing your own library.
+> the sample package identity and API before publishing your own library. Follow
+> [Customize This Template](https://github.com/chengchuu/mazey-npm-template/blob/main/guides/CUSTOMIZE.md)
+> after forking or copying the project.
 
 # mazey-npm-template
 
@@ -13,6 +15,10 @@
 
 A TypeScript template for publishing npm packages in CJS, ESM, and browser formats.
 
+- [Project website](https://chengchuu.github.io/mazey-npm-template/)
+- [Live playground](https://chengchuu.github.io/mazey-npm-template/playground/)
+- [API documentation](https://chengchuu.github.io/mazey-npm-template/api/)
+
 ## Installation
 
 Use mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-template).
@@ -21,7 +27,7 @@ Use mazey-npm-template via [npm](https://www.npmjs.com/package/mazey-npm-templat
 npm install mazey-npm-template
 ```
 
-Of course, you can also download this file and serve it yourself. The file locates at the `lib/mazey-npm-template.min.js`.
+For direct browser usage, load the published `lib/mazey-npm-template.min.js` IIFE bundle.
 
 ## Quick Start
 
@@ -40,27 +46,21 @@ console.log(message); // "Hello, Cheng!"
 Import runtime values and public types from the package root:
 
 ```ts
-import {
-  createGreeting,
-  packageInfo,
-  type CreateGreetingOptions,
-} from "mazey-npm-template";
+import { createGreeting, type CreateGreetingOptions } from "mazey-npm-template";
 
 const options: CreateGreetingOptions = {
   punctuation: ".",
 };
 
 console.log(createGreeting("community", options)); // "Hello, community."
-console.log(packageInfo.name); // "mazey-npm-template"
 ```
 
 ### CommonJS
 
 ```js
-const { createGreeting, packageInfo } = require("mazey-npm-template");
+const { createGreeting } = require("mazey-npm-template");
 
 console.log(createGreeting("CommonJS")); // "Hello, CommonJS!"
-console.log(packageInfo.version);
 ```
 
 ### Browser Script
@@ -98,25 +98,17 @@ createGreeting("  team  ", { punctuation: "." }); // "Hello, team."
 createGreeting("   "); // "Hello, friend!"
 ```
 
-### `packageInfo`
-
-Exposes the package name and version:
-
-```ts
-interface PackageInfo {
-  name: string;
-  version: string;
-}
-```
+The generated [API documentation](https://chengchuu.github.io/mazey-npm-template/api/)
+describes the complete public surface.
 
 ## Package Formats
 
-| Consumer           | Package field | Published file                  |
-| ------------------ | ------------- | ------------------------------- |
-| ESM and bundlers   | `module`      | `lib/index.esm.js`              |
-| Node.js CommonJS   | `main`        | `lib/index.cjs.js`              |
-| Browser/CDN        | `unpkg`       | `lib/mazey-npm-template.min.js` |
-| TypeScript tooling | `types`       | `lib/index.d.ts`                |
+| Consumer           | Package condition       | Published file                  |
+| ------------------ | ----------------------- | ------------------------------- |
+| ESM and bundlers   | `exports.import`        | `lib/index.esm.js`              |
+| Node.js CommonJS   | `exports.require`       | `lib/index.cjs`                 |
+| Browser/CDN        | `unpkg`                 | `lib/mazey-npm-template.min.js` |
+| TypeScript tooling | `exports.types`/`types` | `lib/index.d.ts`                |
 
 Source maps are generated for all JavaScript bundles. The root declarations also load the
 published browser type augmentations from `lib/global.d.ts`.
@@ -130,7 +122,52 @@ npm install
 npm run dev
 ```
 
-The example is served at <http://localhost:8080> and imports the public API directly from `src`.
+The project website is served at <http://localhost:8080/>. The playground is available at
+<http://localhost:8080/playground/> and imports the public API directly from `src`.
+
+Package metadata remains in `package.json`. A package-safe helper derives bundle names without
+loading website settings, while shared repository, website, theme, SEO, and PWA settings flow through
+`project.config.js`. See
+[Customize This Template](https://github.com/chengchuu/mazey-npm-template/blob/main/guides/CUSTOMIZE.md) for
+the post-fork checklist.
+
+Generate the complete GitHub Pages artifact, including the website, playground, API documentation,
+`robots.txt`, and `sitemap.xml`:
+
+```bash
+npm run docs
+npm run seo:validate
+npm run pwa:validate
+```
+
+The deployed crawler files are
+[`/mazey-npm-template/robots.txt`](https://chengchuu.github.io/mazey-npm-template/robots.txt)
+and
+[`/mazey-npm-template/sitemap.xml`](https://chengchuu.github.io/mazey-npm-template/sitemap.xml).
+
+### Add The Website To Your Device
+
+The project website is a Progressive Web App scoped to
+`/mazey-npm-template/`. Supported Chrome and Edge browsers may show their own install icon or the
+site's **Install app** action when the browser exposes an install prompt. Other browsers may require
+installation through their menus. On iPhone and iPad, Safari users can choose **Share**, then
+**Add to Home Screen**; its capabilities are not identical to a Chrome installation.
+
+Installed standalone mode keeps Home, Playground, Install, Usage, API, GitHub, and npm navigation available.
+Adding the website to your device and the browser Fullscreen API are separate capabilities, so
+using the standalone app does not guarantee native fullscreen support.
+
+Build and serve a production-like local PWA at
+<http://127.0.0.1:4173/mazey-npm-template/>:
+
+```bash
+npm run pwa:preview
+```
+
+Normal `npm run dev` does not register the production service worker. When testing worker updates,
+use the browser's Application tools to unregister older workers or clear site data before a clean
+install. Do not open generated HTML directly from the filesystem; service workers require HTTPS or
+a trusted local origin such as `localhost`.
 
 ## License
 
